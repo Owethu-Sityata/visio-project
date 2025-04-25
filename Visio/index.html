@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visio Webpage</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- Site Header with Logo and Navigation Toggle -->
+    <header id="site-header">
+        <img src="assets/logo.png" alt="Logo" class="site-logo" />
+        <div class="nav-toggle">&#9776;</div>
+    </header>
+
+    <!-- Image Slider/Carousel Section -->
+    <section class="image-slider">
+        <ul class="image-reel">
+            <!-- Slide 1 -->
+            <li class="active-slide" data-caption="LOOKING BEYOND THE ORDINARY FOR 21 YEARS">
+                <img src="assets/slide-3.png" alt="Slide 1" />
+                <h3 class="slide-caption">LOOK BEYOND THE ORDINARY</h3>
+            </li>
+            <!-- Slide 2 -->
+            <li data-caption="LEAVE NO STONE UNTURNED">
+                <img src="assets/slide-2.png" alt="Slide 2" />
+                <h3 class="slide-caption">LEAVE NO STONE UNTURNED</h3>
+            </li>
+            <!-- Slide 3 -->
+            <li data-caption="WE CAN AND WE WILL">
+                <img src="assets/slide-1.jpg" alt="Slide 3" />
+                <h3 class="slide-caption">WE CAN AND WE WILL</h3>
+            </li>
+        </ul>
+
+        <!-- Slider Next Button -->
+        <img src="assets/next.svg" alt="Next Slide" class="next-button" id="next-slide-btn" />
+
+        <!-- Decorative Overlay (black box on right) -->
+        <div class="slider-decoration"></div>
+
+        <!-- Slider Dots/Indicators -->
+        <div class="slide-dots">
+            <img src="assets/slider-dots.svg" alt="Active Dot" />
+            <img src="assets/dots2.svg" alt="Inactive Dot" />
+            <img src="assets/dots3.svg" alt="Inactive Dot" />
+        </div>
+    </section>
+
+    <!-- Divider Line Below Slider -->
+    <div class="visual-divider"></div>
+
+    <!-- Company Overview Section -->
+    <section class="company-info-wrapper">
+        <div class="company-intro">
+            <p>
+                Visio is an investment management firm initially founded by Patrice
+                Moyal in 2003. The nimble, highly focused and dynamic team manage
+                assets across listed strategies for a diversified client base that
+                includes some of the world's largest and most sophisticated investors.
+            </p>
+        </div>
+
+        <!-- Decorative SVG Line Art -->
+        <div class="decorative-artwork">
+            <img src="assets/artwork.svg" alt="Artwork Line" />
+        </div>
+    </section>
+
+    <!-- CTA Block Section (3 Vertical Boxes) -->
+    <div class="call-to-actions">
+        <div class="cta-block cta-block-one">
+            <div class="cta-text">THE VISIO <br />DIFFERENCE</div>
+        </div>
+        <div class="cta-block cta-block-two">
+            <div class="cta-text">MEET THE <br />VISIO TEAM</div>
+        </div>
+        <div class="cta-block cta-block-three">
+            <div class="cta-text">OUR FUNDS AND INVESTMENTS</div>
+        </div>
+    </div>
+
+    <!-- Fund Navigation Buttons Section -->
+    <section class="fund-navigation">
+        <button class="fund-button">
+            HEDGE FUNDS <img src="assets/small-arrow.svg" alt="Arrow" />
+        </button>
+        <button class="fund-button">
+            UNIT TRUSTS <img src="assets/small-arrow.svg" alt="Arrow" />
+        </button>
+        <button class="fund-button">
+            SEGREGATED MANDATES <img src="assets/small-arrow.svg" alt="Arrow" />
+        </button>
+        <button class="fund-button">
+            AFRICA FUNDS <img src="assets/small-arrow.svg" alt="Arrow" />
+        </button>
+        <button class="fund-button">
+            FUND PERFORMANCE <img src="assets/small-arrow.svg" alt="Arrow" />
+        </button>
+        <button class="fund-button">
+            RISK MANAGEMENT <img src="assets/small-arrow.svg" alt="Arrow" />
+        </button>
+    </section>
+
+    <!-- JavaScript Logic (e.g., slider functionality) -->
+    <script src="js/script.js"></script>
+</body>
+</html>

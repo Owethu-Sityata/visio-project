@@ -1,0 +1,394 @@
+/* GLOBAL RESET*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: white;
+  line-height: 1.6;
+}
+
+/* IMAGE SLIDER SECTION */
+.image-slider {
+  position: relative;
+  margin-top: 80px;
+  overflow: hidden;
+}
+
+.image-reel {
+  display: flex;
+  width: 300%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image-reel li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  flex-shrink: 0;
+}
+
+.image-reel img {
+  width: 93vw;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  padding-left: 8vw;
+  padding-right: 3vw;
+}
+
+.image-reel li h3 {
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  margin-top: -60px;
+  background-color: #244AC2;
+  display: block;
+  height: 120px;
+  color: white;
+  padding-left: 132px;
+  padding-right: 120px;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 120px;
+  transition: left 0.6s ease 0.3s;
+  opacity: 0;
+}
+
+.image-reel li.active-slide h3 {
+  left: 0%;
+  opacity: 1;
+}
+
+#next-slide-btn {
+  position: absolute;
+  right: 14vw;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 100px;
+  cursor: pointer;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.slide-dots {
+  position: absolute;
+  bottom: 20px;
+  right: 13vw;
+  display: flex;
+  gap: 10px;
+  z-index: 11;
+}
+
+.slide-dots img {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.slider-decoration {
+  position: absolute;
+  top: calc(50% - 60px);
+  right: 0;
+  width: 144px;
+  height: 120px;
+  background-color: black;
+  z-index: 5;
+}
+
+/* HEADER SECTION*/
+#site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 3vw 1em 8vw;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.site-logo {
+  height: 30px;
+}
+
+.nav-toggle {
+  font-size: 1.8em;
+  cursor: pointer;
+  user-select: none;
+  margin-right: 3.8em;
+}
+
+/* INTRODUCTION SECTION */
+.company-info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3em 2em;
+  flex-wrap: wrap;
+}
+
+.company-intro {
+  width: 60%;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 300;
+  color: #061C2C;
+  padding-left: 10vw;
+}
+
+.decorative-artwork {
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 12vw;
+}
+
+.decorative-artwork img {
+  width: 100%;
+  height: auto;
+  max-width: 416px;
+  object-fit: contain;
+}
+
+/* CTA SECTION */
+.call-to-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 3em 12vw;
+  background-color: white;
+  gap: 2em;
+}
+
+.cta-block {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #061C2C;
+  color: white;
+  padding: 2em 2em 1.5em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: background 0.3s ease;
+  min-height: 200px;
+}
+
+.cta-block::after {
+  content: ">";
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  font-size: 2em;
+  color: #0B7CFF;
+}
+
+.cta-text {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: white;
+  padding-top: 2.5em;
+}
+
+/* FUND NAVIGATION */
+.fund-navigation {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background: white;
+  padding: 3em 12vw;
+  gap: 2em;
+}
+
+.fund-button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #244AC2;
+  color: white;
+  border: none;
+  padding: 0.75em 1em;
+  font-size: 0.75em;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  gap: 0.5em;
+  line-height: 1;
+}
+
+.fund-button img {
+  width: 10px;
+  height: 10px;
+}
+
+.fund-button:hover {
+  background: black;
+}
+
+/* TABLETS */
+@media (max-width: 1024px) {
+  .company-info-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2em 5vw;
+  }
+
+  .company-intro,
+  .decorative-artwork {
+    width: 100%;
+    padding: 0;
+  }
+
+  .decorative-artwork {
+    justify-content: center;
+    margin-top: 2em;
+  }
+
+  .call-to-actions {
+    padding: 2em 5vw;
+  }
+
+  .cta-block {
+    flex: 1 1 calc(50% - 1em);
+  }
+
+  .fund-navigation {
+    padding: 2em 5vw;
+  }
+
+  .fund-button {
+    flex: 1 1 calc(50% - 1em);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 745px) {
+  .active-slide {
+    height: 900px;
+  }
+
+  .nav-toggle {
+    margin-right: 0;
+  }
+
+  .image-slider {
+    height: 300px;
+    margin-bottom: 30px;
+  }
+
+  .image-slider:after {
+    display: none;
+  }
+
+  .call-to-actions {
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 2em 5vw;
+  }
+
+  .cta-block {
+    flex: 1 1 100%;
+    padding: 1.5em;
+    min-height: auto;
+  }
+
+  .cta-block::after {
+    font-size: 1.5em;
+  }
+
+  .cta-text {
+    font-size: 18px;
+    padding-top: 3em;
+  }
+
+  .image-reel img {
+    width: 38%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .image-reel li h3 {
+    top: 10%;
+    margin-top: 0;
+    height: auto;
+    line-height: 1.4;
+    font-size: 10px;
+    padding: 1em;
+    padding-left: 16em;
+    padding-right: 2em;
+  }
+
+  .image-reel li.active-slide h3 {
+    left: -11%;
+    right: 83%;
+  }
+
+  .slider-decoration {
+    display: none;
+  }
+
+  #next-slide-btn {
+    width: 50px;
+    right: -2%;
+  }
+
+  .next-button {
+    width: 60px;
+    right: 11vw;
+  }
+
+  .slide-dots {
+    right: 17%;
+    transform: translateX(50%);
+    bottom: 10px;
+  }
+
+  .company-info-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2em 5vw;
+  }
+
+  .company-info-wrapper .company-intro,
+  .company-info-wrapper .decorative-artwork {
+    width: 100%;
+    padding: 0;
+  }
+
+  .company-info-wrapper .decorative-artwork {
+    justify-content: flex-start;
+    margin-top: 1em;
+  }
+
+  .company-info-wrapper .decorative-artwork img {
+    max-width: 100%;
+  }
+
+  .fund-navigation {
+    flex-direction: column;
+    gap: 1em;
+    padding: 2em 5vw;
+  }
+
+  .fund-button {
+    flex: 1 1 100%;
+    font-size: 1em;
+  }
+}
